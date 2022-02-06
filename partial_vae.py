@@ -351,6 +351,13 @@ for i in range(n):
 
 plt.figure(figsize=(10,10))
 plt.imshow(figure, cmap='Greys_r')
+plt.tick_params(
+    axis='both',
+    which='both',
+    bottom=False,
+    left=False,
+    labelbottom=False,
+    labelleft=False)
 plt.show()
 
 
@@ -362,6 +369,13 @@ image = x_test[tin]
 digit = tf.reshape(image, [digit_size, digit_size])
 plt.figure(figsize=(5,5))
 plt.imshow(digit, cmap='Greys_r')
+plt.tick_params(
+    axis='both',
+    which='both',
+    bottom=False,
+    left=False,
+    labelbottom=False,
+    labelleft=False)
 plt.show()
 
 @tf.autograph.experimental.do_not_convert
@@ -384,6 +398,13 @@ obsim = tf.math.multiply(image, tf.cast(mask, tf.float32))
 digit = tf.reshape(obsim, [digit_size, digit_size])
 plt.figure(figsize=(5,5))
 plt.imshow(digit, cmap='Greys_r')
+plt.tick_params(
+    axis='both',
+    which='both',
+    bottom=False,
+    left=False,
+    labelbottom=False,
+    labelleft=False)
 plt.show()
 
 # Call the model with the obscured image and its obscuring mask.
@@ -406,5 +427,12 @@ for i in range(n):
 
 plt.figure(figsize=(10,10))
 plt.imshow(figure, cmap='Greys_r')
+plt.tick_params(
+    axis='both',
+    which='both',
+    bottom=False,
+    left=False,
+    labelbottom=False,
+    labelleft=False)
 plt.show()
 
